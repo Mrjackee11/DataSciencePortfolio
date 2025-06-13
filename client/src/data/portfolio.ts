@@ -10,17 +10,15 @@ export interface Project {
   metrics?: string;
 }
 
-export interface Skill {
-  name: string;
-  level: number;
-  category: 'programming' | 'ml' | 'analysis' | 'visualization';
-}
+
 
 export interface Education {
   degree: string;
   institution: string;
   period: string;
   details?: string;
+  location?: string;
+  subjects?: string[];
 }
 
 export interface Experience {
@@ -99,39 +97,46 @@ export const projects: Project[] = [
   }
 ];
 
+// Updated skill categories to match the design
+export interface Skill {
+  name: string;
+  level: number;
+  category: 'data-science' | 'frontend' | 'backend';
+}
+
 export const skills: Skill[] = [
-  // Programming
-  { name: 'Python', level: 95, category: 'programming' },
-  { name: 'R', level: 88, category: 'programming' },
-  { name: 'SQL', level: 92, category: 'programming' },
+  // Data Science
+  { name: 'Python', level: 90, category: 'data-science' },
+  { name: 'Pandas & NumPy', level: 50, category: 'data-science' },
+  { name: 'Machine Learning', level: 60, category: 'data-science' },
   
-  // Machine Learning
-  { name: 'Scikit-learn', level: 90, category: 'ml' },
-  { name: 'TensorFlow', level: 85, category: 'ml' },
-  { name: 'PyTorch', level: 82, category: 'ml' },
+  // Frontend Development
+  { name: 'React / Next.js', level: 95, category: 'frontend' },
+  { name: 'JavaScript / TypeScript', level: 90, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 90, category: 'frontend' },
   
-  // Data Analysis
-  { name: 'Pandas', level: 95, category: 'analysis' },
-  { name: 'NumPy', level: 93, category: 'analysis' },
-  { name: 'Jupyter', level: 98, category: 'analysis' },
-  
-  // Visualization
-  { name: 'Matplotlib', level: 90, category: 'visualization' },
-  { name: 'Plotly', level: 87, category: 'visualization' },
-  { name: 'Tableau', level: 83, category: 'visualization' }
+  // Backend & DevOps
+  { name: 'Node.js / Express.js', level: 90, category: 'backend' },
+  { name: 'MongoDB / PostgreSQL', level: 85, category: 'backend' },
+  { name: 'Docker', level: 80, category: 'backend' }
 ];
 
 export const education: Education[] = [
   {
-    degree: 'Master of Science in Data Science',
-    institution: 'University of California, Berkeley',
-    period: '2023-2025'
+    degree: 'Bachelor of Science in Data Science',
+    institution: 'DG Vaishnav College',
+    period: '2023 - Present',
+    details: 'Focused on AI development, data structures, algorithms, and database systems. Graduated with honors.',
+    location: 'Chennai, Tamil Nadu',
+    subjects: ['Data Structures', 'Algorithms', 'Databases', 'Operating Systems', 'Artificial Intelligence']
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'UCLA',
-    period: '2019-2023',
-    details: 'Magna Cum Laude'
+    degree: 'Secondary School Certificate (8th to SSLC)',
+    institution: 'THSS Vattamkulam',
+    period: '2017 - 2020',
+    details: 'Completed secondary education with strong performance in science and mathematics.',
+    location: 'Vattamkulam, Kerala',
+    subjects: ['Science', 'Mathematics', 'English']
   }
 ];
 
@@ -153,12 +158,13 @@ export const additionalTechnologies = [
 ];
 
 export const personalInfo = {
-  name: 'Alex Chen',
-  title: 'Data Science Student & Machine Learning Enthusiast',
-  description: 'Passionate about transforming data into actionable insights. Currently pursuing Master\'s in Data Science with focus on machine learning, statistical analysis, and data visualization.',
+  name: 'Anu Sarangh',
+  title: 'Open Source Contributor',
+  description: 'I create exceptional digital experiences with modern technologies. Passionate about clean code, user experience, and innovative solutions.',
   image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300',
-  email: 'alex.chen@email.com',
-  linkedin: 'linkedin.com/in/alexchen-ds',
-  github: 'github.com/alexchen-ds',
-  location: 'San Francisco, CA'
+  email: 'sxrngh@gmail.com',
+  linkedin: 'linkedin.com/in/anusarangh',
+  github: 'github.com/anusarangh',
+  location: 'Chennai, TamilNadu, India',
+  phone: '+91 7510717452'
 };
