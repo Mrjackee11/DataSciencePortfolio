@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Github, MapPin, Send } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { personalInfo } from '@/data/portfolio';
 
 interface ContactForm {
   name: string;
   email: string;
-  subject: string;
   message: string;
 }
 
@@ -19,7 +16,6 @@ export function Contact() {
   const [form, setForm] = useState<ContactForm>({
     name: '',
     email: '',
-    subject: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,175 +38,115 @@ export function Contact() {
       description: "Thank you for your message! I will get back to you soon.",
     });
 
-    setForm({ name: '', email: '', subject: '', message: '' });
+    setForm({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: personalInfo.email,
-      href: `mailto:${personalInfo.email}`,
-      color: 'blue'
-    },
-    {
-      icon: Linkedin,
-      title: 'LinkedIn',
-      value: personalInfo.linkedin,
-      href: `https://${personalInfo.linkedin}`,
-      color: 'blue'
-    },
-    {
-      icon: Github,
-      title: 'GitHub',
-      value: personalInfo.github,
-      href: `https://${personalInfo.github}`,
-      color: 'purple'
-    },
-    {
-      icon: MapPin,
-      title: 'Location',
-      value: personalInfo.location,
-      color: 'orange'
-    }
-  ];
-
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: 'bg-blue-100 dark:bg-blue-900/30 text-blue-600',
-      green: 'bg-green-100 dark:bg-green-900/30 text-green-600',
-      purple: 'bg-purple-100 dark:bg-purple-900/30 text-purple-600',
-      orange: 'bg-orange-100 dark:bg-orange-900/30 text-orange-600'
-    };
-    return colors[color as keyof typeof colors] || colors.blue;
-  };
-
   return (
-    <section id="contact" className="py-20 animate-slide-up">
+    <section id="contact" className="py-20 bg-black dark:bg-black animate-slide-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 portfolio-text-gradient">
             Get In Touch
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            I&apos;m always open to discussing data science opportunities, collaborations, 
-            or just connecting with fellow data enthusiasts
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Have a project in mind? Let's discuss how we can work together
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Form */}
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
-              Let&apos;s Connect
+            <h3 className="text-xl font-semibold mb-4 text-white">
+              Send me a message
             </h3>
-            <div className="space-y-6">
-              {contactInfo.map((info, index) => {
-                const IconComponent = info.icon;
-                const content = (
-                  <div className="flex items-center">
-                    <div className={`w-12 h-12 ${getColorClasses(info.color)} rounded-lg flex items-center justify-center mr-4`}>
-                      <IconComponent size={20} />
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-gray-900 dark:text-gray-100">
-                        {info.title}
-                      </h4>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        {info.value}
-                      </p>
-                    </div>
-                  </div>
-                );
+            <p className="text-gray-400 mb-8">
+              I'll get back to you as soon as possible
+            </p>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <Input
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                value={form.name}
+                onChange={handleInputChange}
+                required
+                className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
+              />
 
-                return info.href ? (
-                  <a
-                    key={index}
-                    href={info.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block hover:bg-gray-50 dark:hover:bg-slate-800 rounded-lg p-2 -m-2 transition-colors"
-                  >
-                    {content}
-                  </a>
-                ) : (
-                  <div key={index}>{content}</div>
-                );
-              })}
-            </div>
+              <Input
+                name="email"
+                type="email"
+                placeholder="Your Email"
+                value={form.email}
+                onChange={handleInputChange}
+                required
+                className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
+              />
+
+              <Textarea
+                name="message"
+                rows={5}
+                placeholder="Your Message"
+                value={form.message}
+                onChange={handleInputChange}
+                required
+                className="bg-gray-900 border-gray-700 text-white placeholder:text-gray-500"
+              />
+
+              <Button
+                type="submit"
+                className="w-full bg-white text-black hover:bg-gray-200 font-medium"
+                disabled={isSubmitting}
+              >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
+            </form>
           </div>
 
-          {/* Contact Form */}
-          <Card className="portfolio-card">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-semibold mb-6 text-gray-900 dark:text-gray-100">
-                Send a Message
-              </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your name"
-                    value={form.name}
-                    onChange={handleInputChange}
-                    required
-                  />
+          {/* Contact Information */}
+          <div>
+            <h3 className="text-xl font-semibold mb-8 text-white">
+              Let's Connect
+            </h3>
+            <p className="text-gray-400 mb-8">
+              I'm always interested in hearing about new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+            
+            <div className="space-y-6">
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
+                  <Mail className="text-white" size={20} />
                 </div>
-
                 <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={form.email}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <h4 className="font-medium text-white">Email</h4>
+                  <p className="text-gray-400">{personalInfo.email}</p>
                 </div>
+              </div>
 
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
+                  <Phone className="text-white" size={20} />
+                </div>
                 <div>
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    placeholder="What's this about?"
-                    value={form.subject}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <h4 className="font-medium text-white">Phone</h4>
+                  <p className="text-gray-400">{personalInfo.phone}</p>
                 </div>
+              </div>
 
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
+                  <MapPin className="text-white" size={20} />
+                </div>
                 <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder="Tell me about your project or opportunity..."
-                    value={form.message}
-                    onChange={handleInputChange}
-                    required
-                  />
+                  <h4 className="font-medium text-white">Location</h4>
+                  <p className="text-gray-400">{personalInfo.location}</p>
                 </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                  disabled={isSubmitting}
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
