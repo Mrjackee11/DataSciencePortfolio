@@ -179,23 +179,19 @@ export const additionalTechnologies = [
   'R Programming',
   'MATLAB',
   'Apache Airflow',
-  'MLflow',
-  'SHAP',
-  'Optuna',
-  'Weights & Biases',
-  'Elasticsearch',
-  'Redis',
-  'Kubernetes',
-  'Terraform'
+  'MLflow'
 ];
 
 export const personalInfo = {
-  name: 'Alex Morgan',
+  name: 'Mahesh R',
   title: 'Data Science Student & AI Enthusiast',
-  email: 'alex.morgan@email.com',
-  phone: '+91 98765 43210',
+  email: 'maheshr12117@gmail.com',
+  phone: '+91 9677870887',
   location: 'Chennai, India',
   bio: 'Passionate data science student with hands-on experience in machine learning, statistical analysis, and data visualization. Dedicated to leveraging data-driven insights to solve real-world problems and drive business value.',
   interests: ['Machine Learning', 'Deep Learning', 'Data Visualization', 'Statistical Modeling', 'MLOps', 'Open Source'],
-  languages: ['English (Fluent)', 'Tamil (Native)', 'Hindi (Conversational)']
+  languages: ['English (Fluent)', 'Tamil (Native)', 'Hindi (Conversational)'],
+  description: 'Building intelligent solutions through data science and machine learning',
+  github: 'https://github.com/alexmorgan',
+  linkedin: 'https://linkedin.com/in/alexmorgan'
 };
