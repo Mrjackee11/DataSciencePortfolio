@@ -2,9 +2,9 @@ import { skills } from '@/data/portfolio';
 
 export function Skills() {
   const groupedSkills = {
-    'Data Science': skills.filter(skill => skill.category === 'data-science'),
     'Frontend Development': skills.filter(skill => skill.category === 'frontend'),
-    'Backend & DevOps': skills.filter(skill => skill.category === 'backend')
+    'Backend Development': skills.filter(skill => skill.category === 'backend'),
+    'DevOps & Tools': skills.filter(skill => skill.category === 'data-science')
   };
 
   return (

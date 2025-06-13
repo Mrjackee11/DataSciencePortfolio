@@ -105,38 +105,38 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
-  // Data Science
-  { name: 'Python', level: 90, category: 'data-science' },
-  { name: 'Pandas & NumPy', level: 50, category: 'data-science' },
-  { name: 'Machine Learning', level: 60, category: 'data-science' },
-  
   // Frontend Development
-  { name: 'React / Next.js', level: 95, category: 'frontend' },
-  { name: 'JavaScript / TypeScript', level: 90, category: 'frontend' },
-  { name: 'Tailwind CSS', level: 90, category: 'frontend' },
+  { name: 'React / Vue.js', level: 92, category: 'frontend' },
+  { name: 'JavaScript / TypeScript', level: 88, category: 'frontend' },
+  { name: 'HTML5 / CSS3', level: 95, category: 'frontend' },
   
-  // Backend & DevOps
-  { name: 'Node.js / Express.js', level: 90, category: 'backend' },
-  { name: 'MongoDB / PostgreSQL', level: 85, category: 'backend' },
-  { name: 'Docker', level: 80, category: 'backend' }
+  // Backend Development
+  { name: 'Node.js / Python', level: 85, category: 'backend' },
+  { name: 'REST APIs / GraphQL', level: 82, category: 'backend' },
+  { name: 'Database Design', level: 78, category: 'backend' },
+  
+  // DevOps & Tools
+  { name: 'Git / GitHub', level: 90, category: 'data-science' },
+  { name: 'AWS / Cloud Services', level: 75, category: 'data-science' },
+  { name: 'Docker / CI/CD', level: 70, category: 'data-science' }
 ];
 
 export const education: Education[] = [
   {
-    degree: 'Bachelor of Science in Data Science',
-    institution: 'DG Vaishnav College',
-    period: '2023 - Present',
-    details: 'Focused on AI development, data structures, algorithms, and database systems. Graduated with honors.',
-    location: 'Chennai, Tamil Nadu',
-    subjects: ['Data Structures', 'Algorithms', 'Databases', 'Operating Systems', 'Artificial Intelligence']
+    degree: 'Bachelor of Science in Computer Science',
+    institution: 'University of Technology',
+    period: '2020 - 2024',
+    details: 'Specialized in software engineering, web development, and database systems. Graduated Magna Cum Laude.',
+    location: 'San Francisco, CA',
+    subjects: ['Software Engineering', 'Web Development', 'Database Systems', 'Computer Networks', 'Data Structures']
   },
   {
-    degree: 'Secondary School Certificate (8th to SSLC)',
-    institution: 'THSS Vattamkulam',
-    period: '2017 - 2020',
-    details: 'Completed secondary education with strong performance in science and mathematics.',
-    location: 'Vattamkulam, Kerala',
-    subjects: ['Science', 'Mathematics', 'English']
+    degree: 'High School Diploma',
+    institution: 'Central High School',
+    period: '2016 - 2020',
+    details: 'Focused on STEM subjects with honors in Mathematics and Computer Science.',
+    location: 'Your City, State',
+    subjects: ['Advanced Mathematics', 'Computer Science', 'Physics', 'Chemistry']
   }
 ];
 
@@ -158,13 +158,13 @@ export const additionalTechnologies = [
 ];
 
 export const personalInfo = {
-  name: 'Anu Sarangh',
-  title: 'Open Source Contributor',
-  description: 'I create exceptional digital experiences with modern technologies. Passionate about clean code, user experience, and innovative solutions.',
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300',
-  email: 'sxrngh@gmail.com',
-  linkedin: 'linkedin.com/in/anusarangh',
-  github: 'github.com/anusarangh',
-  location: 'Chennai, TamilNadu, India',
-  phone: '+91 7510717452'
+  name: 'Your Name',
+  title: 'Full Stack Developer',
+  description: 'I build innovative web applications and digital solutions using cutting-edge technologies. Passionate about creating seamless user experiences and scalable backend systems.',
+  image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300',
+  email: 'your.email@example.com',
+  linkedin: 'linkedin.com/in/yourprofile',
+  github: 'github.com/yourusername',
+  location: 'Your City, Your Country',
+  phone: '+1 234 567 8900'
 };

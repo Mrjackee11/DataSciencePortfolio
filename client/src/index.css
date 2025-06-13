@@ -26,11 +26,11 @@
   --ring: hsl(240, 5.9%, 10%);
   --radius: 0.5rem;
   
-  /* Custom portfolio colors */
-  --portfolio-blue: hsl(221, 83%, 53%);
-  --portfolio-purple: hsl(262, 83%, 58%);
-  --portfolio-green: hsl(142, 76%, 36%);
-  --portfolio-orange: hsl(25, 95%, 53%);
+  /* Custom portfolio colors - Green/Teal Theme */
+  --portfolio-primary: hsl(173, 80%, 40%);
+  --portfolio-secondary: hsl(150, 100%, 35%);
+  --portfolio-accent: hsl(195, 100%, 50%);
+  --portfolio-success: hsl(142, 76%, 36%);
   --portfolio-gray-50: hsl(210, 40%, 98%);
   --portfolio-gray-100: hsl(210, 40%, 96%);
   --portfolio-gray-600: hsl(220, 9%, 46%);
@@ -58,11 +58,11 @@
   --destructive-foreground: hsl(210, 40%, 98%);
   --ring: hsl(212, 72%, 59%);
   
-  /* Custom portfolio colors for dark mode */
-  --portfolio-blue: hsl(221, 83%, 53%);
-  --portfolio-purple: hsl(262, 83%, 58%);
-  --portfolio-green: hsl(142, 76%, 36%);
-  --portfolio-orange: hsl(25, 95%, 53%);
+  /* Custom portfolio colors for dark mode - Green/Teal Theme */
+  --portfolio-primary: hsl(173, 80%, 40%);
+  --portfolio-secondary: hsl(150, 100%, 35%);
+  --portfolio-accent: hsl(195, 100%, 50%);
+  --portfolio-success: hsl(142, 76%, 36%);
   --portfolio-gray-50: hsl(222, 84%, 5%);
   --portfolio-gray-100: hsl(217, 32%, 17%);
   --portfolio-gray-600: hsl(215, 20%, 65%);
@@ -86,11 +86,11 @@
 
 @layer components {
   .portfolio-gradient {
-    background: linear-gradient(135deg, var(--portfolio-blue), var(--portfolio-purple));
+    background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-secondary));
   }
   
   .portfolio-text-gradient {
-    background: linear-gradient(135deg, var(--portfolio-blue), var(--portfolio-purple));
+    background: linear-gradient(135deg, var(--portfolio-primary), var(--portfolio-accent));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
