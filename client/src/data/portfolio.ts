@@ -123,19 +123,20 @@ export const skills: Skill[] = [
 
 export const education: Education[] = [
   {
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'University of Technology',
-    period: '2020 - 2024',
-    details: 'Specialized in software engineering, web development, and database systems. Graduated Magna Cum Laude.',
-    location: 'San Francisco, CA',
+    degree: 'Bachelor of Science in Data Science',
+    institution: 'DG vaishnav college',
+    period: '2023 - Present',
+    details: 'Specialized in Analyizing a Raw Data and making resloution over it in a impactful way', 
+      'creating a well defined model and making a prediction over it',
+    location: 'Chenna0i',
     subjects: ['Software Engineering', 'Web Development', 'Database Systems', 'Computer Networks', 'Data Structures']
   },
   {
-    degree: 'High School Diploma',
-    institution: 'Central High School',
-    period: '2016 - 2020',
-    details: 'Focused on STEM subjects with honors in Mathematics and Computer Science.',
-    location: 'Your City, State',
+    degree: 'Higher secondary Education',
+    institution: 'Govt Boys High School',
+    period: '2017',
+    details: 'Focused on subjects with honors in Mathematics .',
+    location: 'Alanganallur,Madurai',
     subjects: ['Advanced Mathematics', 'Computer Science', 'Physics', 'Chemistry']
   }
 ];
@@ -143,28 +144,24 @@ export const education: Education[] = [
 export const experience: Experience[] = [
   {
     title: 'Data Science Intern',
-    company: 'Tech Startup',
-    period: 'Summer 2024'
+    company: 'Shamgar software sls',
+    period: 'Summer 2025'
   },
-  {
-    title: 'Research Assistant',
-    company: 'UCLA Data Lab',
-    period: '2022-2023'
-  }
+  
 ];
 
 export const additionalTechnologies = [
-  'Docker', 'Git', 'AWS', 'MongoDB', 'PostgreSQL', 'Apache Spark', 'Hadoop', 'Linux'
+  'Python', 'Git', 'PowerBI', 'MySql', 'R language', 'Azure Machine Learning', 'Java'
 ];
 
 export const personalInfo = {
-  name: 'Your Name',
-  title: 'Full Stack Developer',
+  name: 'Mahesh R',
+  title: 'Data Scientist',
   description: 'I build innovative web applications and digital solutions using cutting-edge technologies. Passionate about creating seamless user experiences and scalable backend systems.',
   image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&h=300',
-  email: 'your.email@example.com',
+  email: 'maheshr12117@gmail.com',
   linkedin: 'linkedin.com/in/yourprofile',
   github: 'github.com/yourusername',
-  location: 'Your City, Your Country',
-  phone: '+1 234 567 8900'
+  location: 'Nanganallur,Chennai',
+  phone: '+91 9677870887'
 };
