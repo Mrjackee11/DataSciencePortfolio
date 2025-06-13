@@ -14,7 +14,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center bg-black dark:bg-black animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
-          Hi, I'm <span className="portfolio-text-gradient">Anu Sarangh</span>
+          Hi, I'm <span className="portfolio-text-gradient">{personalInfo.name}</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">

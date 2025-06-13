@@ -16,8 +16,8 @@ export function Education() {
 
         <div className="max-w-4xl mx-auto space-y-8">
           {education.map((edu, index) => (
-            <div key={index} className="border-l-2 border-purple-600 pl-8 relative">
-              <div className="absolute w-4 h-4 bg-purple-600 rounded-full -left-2 top-2"></div>
+            <div key={index} className="border-l-2 border-teal-500 pl-8 relative">
+              <div className="absolute w-4 h-4 bg-teal-500 rounded-full -left-2 top-2"></div>
               
               <div className="bg-gray-900 rounded-lg p-6">
                 <div className="flex justify-between items-start mb-4">

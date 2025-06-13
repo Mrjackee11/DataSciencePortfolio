@@ -23,7 +23,7 @@ export function About() {
 
             <div className="bg-gray-900 rounded-lg p-6">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center mr-4">
                   <Code2 className="text-white" size={24} />
                 </div>
                 <div>
