@@ -29,63 +29,13 @@ export interface Experience {
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Customer Churn Prediction Model',
-    description: 'Built a machine learning model to predict customer churn using ensemble methods, achieving 92% accuracy and helping reduce customer attrition by 25%.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
+    title: 'Credit Card Risk Analysis',
+    description: 'Comprehensive machine learning model for assessing credit card default risk. Analyzed customer payment histories, credit utilization patterns, and demographic factors to predict default probability with high accuracy.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
     category: 'ml',
-    technologies: ['Python', 'Scikit-learn', 'Pandas', 'XGBoost', 'Flask'],
-    githubUrl: 'https://github.com/username/churn-prediction',
-    metrics: '92% accuracy, 25% churn reduction'
-  },
-  {
-    id: '2',
-    title: 'Sales Analytics Dashboard',
-    description: 'Interactive dashboard for real-time sales analytics with predictive forecasting. Processes 100K+ daily transactions with automated reporting.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
-    category: 'viz',
-    technologies: ['Power BI', 'SQL', 'Python', 'Azure', 'DAX'],
-    liveUrl: 'https://app.powerbi.com/dashboard',
-    metrics: '100K+ daily transactions'
-  },
-  {
-    id: '3',
-    title: 'Sentiment Analysis Engine',
-    description: 'NLP system for analyzing customer feedback sentiment across multiple channels. Deployed as microservice handling 50K+ texts daily.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
-    category: 'nlp',
-    technologies: ['BERT', 'Transformers', 'FastAPI', 'Docker', 'AWS'],
-    githubUrl: 'https://github.com/username/sentiment-engine',
-    metrics: '50K+ texts processed daily'
-  },
-  {
-    id: '4',
-    title: 'Supply Chain Optimization',
-    description: 'ML-powered optimization system for inventory management and demand forecasting, reducing costs by 18% and improving delivery times.',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
-    category: 'ml',
-    technologies: ['TensorFlow', 'Apache Spark', 'Kafka', 'MongoDB', 'Kubernetes'],
-    githubUrl: 'https://github.com/username/supply-chain-ml',
-    metrics: '18% cost reduction'
-  },
-  {
-    id: '5',
-    title: 'Financial Risk Assessment',
-    description: 'Deep learning model for credit risk assessment with explainable AI features. Improved loan approval accuracy by 35%.',
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
-    category: 'ml',
-    technologies: ['PyTorch', 'SHAP', 'MLflow', 'PostgreSQL', 'Redis'],
-    githubUrl: 'https://github.com/username/risk-assessment',
-    metrics: '35% accuracy improvement'
-  },
-  {
-    id: '6',
-    title: 'Market Research Automation',
-    description: 'Automated web scraping and analysis pipeline for market research, generating weekly reports from 500+ data sources.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
-    category: 'viz',
-    technologies: ['Beautiful Soup', 'Selenium', 'Airflow', 'Tableau', 'MySQL'],
-    liveUrl: 'https://tableau.public.com/market-analysis',
-    metrics: '500+ sources analyzed weekly'
+    technologies: ['Python', 'Scikit-learn', 'Pandas', 'Random Forest', 'Logistic Regression', 'SMOTE', 'Matplotlib', 'Seaborn'],
+    githubUrl: 'https://github.com/maheshr/credit-card-risk-analysis',
+    metrics: '87% accuracy, 0.82 AUC score'
   }
 ];
 
