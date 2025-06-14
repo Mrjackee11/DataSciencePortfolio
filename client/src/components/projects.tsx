@@ -68,13 +68,7 @@ export function Projects() {
           >
             Data Viz
           </Button>
-          <Button
-            onClick={() => setActiveFilter('nlp')}
-            variant={activeFilter === 'nlp' ? 'default' : 'outline'}
-            className={activeFilter === 'nlp' ? 'bg-blue-600 text-white' : ''}
-          >
-            NLP
-          </Button>
+
         </div>
 
         {/* Projects Grid */}

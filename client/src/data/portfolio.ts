@@ -36,6 +36,17 @@ export const projects: Project[] = [
     technologies: ['Python', 'Scikit-learn', 'Pandas', 'Random Forest', 'Logistic Regression', 'SMOTE', 'Matplotlib', 'Seaborn'],
     githubUrl: 'https://github.com/maheshr/credit-card-risk-analysis',
     metrics: '87% accuracy, 0.82 AUC score'
+  },
+  {
+    id: '2',
+    title: 'Interactive Sales Dashboard',
+    description: 'Dynamic business intelligence dashboard that visualizes sales performance, customer demographics, and revenue trends. Features real-time data updates and interactive filtering capabilities for comprehensive business insights.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
+    category: 'viz',
+    technologies: ['Python', 'Plotly', 'Dash', 'Pandas', 'SQL', 'PostgreSQL', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/maheshr/sales-dashboard',
+    liveUrl: 'https://mahesh-sales-dashboard.herokuapp.com',
+    metrics: '15+ interactive charts, Real-time updates'
   }
 ];
 
@@ -101,6 +112,12 @@ export const experience: Experience[] = [
     company: 'DG Vaishnav College',
     period: 'January 2024 - Present',
     description: 'Assisting in research projects focused on machine learning applications in healthcare. Published findings in college journal and presented at student research symposium.'
+  },
+  {
+    title: 'Machine Learning Trainee',
+    company: 'TechVision Analytics',
+    period: 'October 2024 - December 2024',
+    description: 'Participated in intensive ML training program focusing on deep learning and computer vision. Built image classification models and worked on real-world computer vision projects for retail analytics.'
   },
   {
     title: 'Freelance Data Analyst',

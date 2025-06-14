@@ -40,8 +40,8 @@ export function Navigation() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold">
-              <span className="text-white">&lt; / &gt;</span>
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+              Mahesh
             </div>
           </div>
 

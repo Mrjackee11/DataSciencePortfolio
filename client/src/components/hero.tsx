@@ -14,7 +14,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center bg-black dark:bg-black animate-fade-in">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-white">
-          Hi, I'm <span className="portfolio-text-gradient">{personalInfo.name}</span>
+          Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">{personalInfo.name}</span>
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
@@ -47,7 +47,7 @@ export function Hero() {
             href={`https://${personalInfo.github}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:bg-clip-text hover:text-transparent transition-all duration-300"
           >
             <Github size={24} />
           </a>
@@ -55,13 +55,13 @@ export function Hero() {
             href={`https://${personalInfo.linkedin}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-400 hover:bg-clip-text hover:text-transparent transition-all duration-300"
           >
             <Linkedin size={24} />
           </a>
           <a
             href={`mailto:${personalInfo.email}`}
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-400 hover:bg-gradient-to-r hover:from-green-600 hover:to-emerald-400 hover:bg-clip-text hover:text-transparent transition-all duration-300"
           >
             <Mail size={24} />
           </a>
