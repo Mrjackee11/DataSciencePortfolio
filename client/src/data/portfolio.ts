@@ -49,34 +49,25 @@ export const skills: Skill[] = [
   // Data Science & ML
   { name: 'Python', level: 95, category: 'data-science' },
   { name: 'Machine Learning', level: 90, category: 'data-science' },
-  { name: 'Deep Learning', level: 85, category: 'data-science' },
   { name: 'Statistical Analysis', level: 88, category: 'data-science' },
   { name: 'Data Visualization', level: 92, category: 'data-science' },
   { name: 'SQL', level: 90, category: 'data-science' },
-  { name: 'TensorFlow/PyTorch', level: 85, category: 'data-science' },
   { name: 'Scikit-learn', level: 90, category: 'data-science' },
   { name: 'Pandas/NumPy', level: 95, category: 'data-science' },
-  { name: 'NLP', level: 80, category: 'data-science' },
-  { name: 'Computer Vision', level: 75, category: 'data-science' },
-  { name: 'A/B Testing', level: 85, category: 'data-science' },
+  { name: 'Computer Vision', level: 75, category: 'data-science' }
+  
   
   // Frontend
   { name: 'React', level: 85, category: 'frontend' },
   { name: 'JavaScript/TypeScript', level: 88, category: 'frontend' },
-  { name: 'D3.js', level: 80, category: 'frontend' },
-  { name: 'Plotly/Dash', level: 85, category: 'frontend' },
   { name: 'HTML/CSS', level: 90, category: 'frontend' },
   { name: 'Streamlit', level: 85, category: 'frontend' },
   
   // Backend & Infrastructure
   { name: 'FastAPI/Flask', level: 88, category: 'backend' },
-  { name: 'Django', level: 82, category: 'backend' },
-  { name: 'Docker', level: 85, category: 'backend' },
   { name: 'Apache Spark', level: 80, category: 'backend' },
-  { name: 'Apache Kafka', level: 75, category: 'backend' },
-  { name: 'PostgreSQL/MongoDB', level: 85, category: 'backend' },
+  { name: 'PostgreSQL', level: 85, category: 'backend' },
   { name: 'AWS/Azure', level: 80, category: 'backend' },
-  { name: 'MLOps', level: 78, category: 'backend' },
   { name: 'Git/CI/CD', level: 85, category: 'backend' }
 ];
 
