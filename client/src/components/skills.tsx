@@ -44,40 +44,20 @@ export function Skills() {
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{skill.name}</h4>
                 <div className="relative w-full bg-blue-100 rounded-full h-3 mb-3">
                   <div 
-                    className="absolute top-0 left-0 h-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full animate-pulse-slow"
+                    className="absolute top-0 left-0 h-3 bg-gradient-to-r from-pink-500 to-pink-700 rounded-full animate-pulse-slow"
                     style={{ 
                       width: `${skill.level}%`,
                       animationDelay: `${index * 0.1}s`
                     }}
                   />
                 </div>
-                <span className="text-blue-600 font-bold text-lg">{skill.level}%</span>
+                <span className="text-pink-600 font-bold text-lg">{skill.level}%</span>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Additional Technologies */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Additional Technologies</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.filter(s => s.category === 'frontend' || s.category === 'backend').map((skill, index) => (
-              <div 
-                key={skill.name}
-                className="bg-white rounded-xl shadow-lg border border-blue-100 px-6 py-4 text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              >
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">{skill.name}</h4>
-                <div className="w-full bg-blue-100 rounded-full h-2 mb-2">
-                  <div 
-                    className="h-2 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full transition-all duration-1000"
-                    style={{ width: `${skill.level}%` }}
-                  />
-                </div>
-                <span className="text-blue-600 font-medium text-sm">{skill.level}%</span>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );

@@ -20,11 +20,10 @@ export function Hero() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left">
+        <div className="text-center">
+          <div>
             <div className="mb-6">
-              <div className="flex items-center justify-center lg:justify-start mb-4">
+              <div className="flex items-center justify-center mb-4">
                 <div className="flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full">
                   <Star className="w-4 h-4 text-blue-600" />
                   <span className="text-sm font-medium text-blue-800">Data Science Student</span>
@@ -42,11 +41,11 @@ export function Hero() {
               {personalInfo.title}
             </p>
 
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               {personalInfo.description}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 onClick={() => scrollToSection('contact')}
                 size="lg"
@@ -65,7 +64,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <div className="flex justify-center lg:justify-start space-x-6">
+            <div className="flex justify-center space-x-6">
               <a
                 href={`https://${personalInfo.github}`}
                 target="_blank"
@@ -94,72 +93,11 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Side - Stats/Highlights */}
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg hover:shadow-xl transition-shadow animate-float">
-                <div className="flex items-center mb-3">
-                  <Trophy className="w-6 h-6 text-blue-600 mr-2" />
-                  <h3 className="font-bold text-gray-900">Education</h3>
-                </div>
-                <p className="text-2xl font-bold text-blue-600">BSc</p>
-                <p className="text-sm text-gray-600">Computer Science</p>
-              </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg hover:shadow-xl transition-shadow animate-float" style={{animationDelay: '0.5s'}}>
-                <div className="flex items-center mb-3">
-                  <Award className="w-6 h-6 text-blue-600 mr-2" />
-                  <h3 className="font-bold text-gray-900">Focus</h3>
-                </div>
-                <p className="text-2xl font-bold text-blue-600">ML</p>
-                <p className="text-sm text-gray-600">Machine Learning</p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg hover:shadow-xl transition-shadow animate-float" style={{animationDelay: '1s'}}>
-                <div className="flex items-center mb-3">
-                  <Star className="w-6 h-6 text-blue-600 mr-2" />
-                  <h3 className="font-bold text-gray-900">Skills</h3>
-                </div>
-                <p className="text-2xl font-bold text-blue-600">8+</p>
-                <p className="text-sm text-gray-600">Technologies</p>
-              </div>
-
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-100 shadow-lg hover:shadow-xl transition-shadow animate-float" style={{animationDelay: '1.5s'}}>
-                <div className="flex items-center mb-3">
-                  <ChevronDown className="w-6 h-6 text-blue-600 mr-2" />
-                  <h3 className="font-bold text-gray-900">Projects</h3>
-                </div>
-                <p className="text-2xl font-bold text-blue-600">5+</p>
-                <p className="text-sm text-gray-600">Completed</p>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 text-white shadow-xl">
-              <h3 className="text-xl font-bold mb-3">Ready to Collaborate?</h3>
-              <p className="text-blue-100 mb-4">
-                I'm passionate about turning data into actionable insights and building intelligent solutions.
-              </p>
-              <Button
-                onClick={() => scrollToSection('projects')}
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Explore My Work
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollToSection('about')}
-          className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-lg border border-blue-100 text-blue-600 hover:bg-blue-50 transition-colors"
-        >
-          <ChevronDown size={24} />
-        </button>
-      </div>
+
     </section>
   );
 }
