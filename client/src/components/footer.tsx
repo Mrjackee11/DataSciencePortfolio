@@ -11,7 +11,7 @@ export function Footer() {
               {personalInfo.name}
             </h3>
             <p className="text-gray-600 text-sm">
-              Data Science Student • AI Enthusiast • Problem Solver
+              Data Science Student 
             </p>
           </div>
           
@@ -45,7 +45,7 @@ export function Footer() {
           
           <div className="border-t border-blue-100 pt-6">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved. | Built with React & TypeScript
+              © {new Date().getFullYear()} {personalInfo.name}. All rights reserved. 
             </p>
           </div>
         </div>

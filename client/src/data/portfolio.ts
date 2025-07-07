@@ -149,6 +149,6 @@ export const personalInfo = {
   interests: ['Machine Learning', 'Deep Learning', 'Data Visualization', 'Statistical Modeling', 'MLOps', 'Open Source'],
   languages: ['English (Fluent)', 'Tamil (Native)', 'Hindi (Conversational)'],
   description: 'Building intelligent solutions through data science and machine learning',
-  github: 'https://github.com/alexmorgan',
-  linkedin: 'https://linkedin.com/in/alexmorgan'
+  github: 'https://github.com/mahesh',
+  linkedin: 'https://linkedin.com/in/mahesh'
 };

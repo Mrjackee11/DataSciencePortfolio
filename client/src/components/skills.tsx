@@ -23,9 +23,6 @@ export function Skills() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
             Technical <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Skills</span>
           </h2>
-          <p className="text-blue-600 max-w-2xl mx-auto text-lg font-medium">
-            Data Science Expertise & Technical Proficiency
-          </p>
         </div>
 
         {/* Data Science Skills with Unique Animations */}

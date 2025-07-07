@@ -104,7 +104,7 @@ export function About() {
                   </div>
                   
                   <div className="mt-8">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Powered Innovation</h4>
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Learning never Ends</h4>
                     <p className="text-gray-700 leading-relaxed">
                       Fueling cutting-edge data science solutions with the power of innovation and technology, creating sustainable impact through intelligent systems.
                     </p>

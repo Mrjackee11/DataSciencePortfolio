@@ -9,9 +9,6 @@ export function Education() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             Education & <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Learning</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            My academic journey and continuous learning in data science and technology
-          </p>
         </div>
 
         <div className="space-y-8">
