@@ -116,48 +116,26 @@ export function Contact() {
               </form>
             </div>
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8">
+            {/* Contact Information - Clean Design */}
+            <div className="space-y-6">
+              <div className="text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <Mail className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">Email</p>
-                      <p className="text-gray-900 font-medium">{personalInfo.email}</p>
-                    </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                    <span className="text-gray-900 font-medium">{personalInfo.email}</span>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <Phone className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">Phone</p>
-                      <p className="text-gray-900 font-medium">{personalInfo.phone}</p>
-                    </div>
+                  <div className="flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                    <span className="text-gray-900 font-medium">{personalInfo.phone}</span>
                   </div>
                   
-                  <div className="flex items-center">
-                    <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                      <MapPin className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-gray-500">Location</p>
-                      <p className="text-gray-900 font-medium">{personalInfo.location}</p>
-                    </div>
+                  <div className="flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-blue-600 mr-3" />
+                    <span className="text-gray-900 font-medium">{personalInfo.location}</span>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 text-center">
-                <h4 className="text-xl font-bold text-gray-900 mb-4">Let's Connect!</h4>
-                <p className="text-gray-700 mb-6">
-                  I'm always excited to discuss new opportunities, innovative projects, and potential collaborations in data science and AI.
-                </p>
               </div>
             </div>
           </div>
