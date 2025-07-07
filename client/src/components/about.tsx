@@ -13,37 +13,7 @@ export function About() {
           </p>
         </div>
 
-        {/* Mission Statement with Super 3D Animation */}
-        <div className="mb-16">
-          <div className="relative perspective-1000 group">
-            <div className="transform-3d group-hover:rotate-y-12 transition-all duration-700 ease-out">
-              <div className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-8 shadow-3d transform hover:translate-z-20 transition-all duration-500 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-transparent animate-shimmer"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm animate-3d-bounce">
-                      <Target className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-4 animate-3d-glow">
-                    My Mission
-                  </h3>
-                  <p className="text-blue-100 text-center text-lg leading-relaxed max-w-4xl mx-auto">
-                    To leverage the power of data science and machine learning to solve real-world problems, 
-                    creating innovative solutions that make a meaningful impact on businesses and society. 
-                    I believe in transforming complex data into actionable insights that drive growth and innovation.
-                  </p>
-                  <div className="flex justify-center mt-6">
-                    <div className="flex items-center space-x-2 bg-white/10 rounded-full px-6 py-3 backdrop-blur-sm">
-                      <Zap className="w-5 h-5 text-yellow-300 animate-pulse" />
-                      <span className="text-white font-medium">Data-Driven Innovation</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8 md:p-12">
@@ -64,12 +34,56 @@ export function About() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 animate-float">
-                  <div className="text-4xl mb-4">🎯</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Mission</h4>
-                  <p className="text-gray-700">
-                    Transforming complex data into actionable insights and building AI solutions that make a positive impact on society.
-                  </p>
+                <div className="relative perspective-1000">
+                  <div className="w-64 h-64 mx-auto relative animate-3d-globe">
+                    {/* Globe Container */}
+                    <div className="w-full h-full relative rounded-full bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 shadow-3d overflow-hidden">
+                      {/* Metal Skeleton Grid */}
+                      <div className="absolute inset-0 opacity-30">
+                        {/* Longitude lines */}
+                        <div className="absolute top-0 left-1/2 w-px h-full bg-gray-300 transform -translate-x-1/2 animate-skeleton-rotate"></div>
+                        <div className="absolute top-0 left-1/4 w-px h-full bg-gray-300 transform animate-skeleton-rotate"></div>
+                        <div className="absolute top-0 right-1/4 w-px h-full bg-gray-300 transform animate-skeleton-rotate"></div>
+                        
+                        {/* Latitude lines */}
+                        <div className="absolute top-1/2 left-0 w-full h-px bg-gray-300 transform -translate-y-1/2"></div>
+                        <div className="absolute top-1/4 left-0 w-full h-px bg-gray-300 transform animate-latitude-pulse"></div>
+                        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gray-300 transform animate-latitude-pulse"></div>
+                      </div>
+                      
+                      {/* Country Impressions */}
+                      <div className="absolute inset-0 animate-countries-rotate">
+                        {/* North America */}
+                        <div className="absolute top-6 left-8 w-8 h-6 bg-green-400/60 rounded-sm transform rotate-12 animate-pulse"></div>
+                        {/* Europe */}
+                        <div className="absolute top-8 right-12 w-6 h-4 bg-yellow-400/60 rounded-sm transform -rotate-6 animate-pulse"></div>
+                        {/* Asia */}
+                        <div className="absolute top-12 right-6 w-12 h-8 bg-red-400/60 rounded-sm transform rotate-3 animate-pulse"></div>
+                        {/* Africa */}
+                        <div className="absolute top-16 left-16 w-6 h-10 bg-orange-400/60 rounded-sm transform -rotate-12 animate-pulse"></div>
+                        {/* Australia */}
+                        <div className="absolute bottom-12 right-10 w-6 h-4 bg-purple-400/60 rounded-sm transform rotate-45 animate-pulse"></div>
+                        {/* South America */}
+                        <div className="absolute bottom-6 left-12 w-5 h-8 bg-pink-400/60 rounded-sm transform -rotate-24 animate-pulse"></div>
+                      </div>
+                      
+                      {/* Atmosphere Glow */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-atmosphere"></div>
+                    </div>
+                    
+                    {/* Floating Data Points */}
+                    <div className="absolute -top-4 -right-4 w-4 h-4 bg-yellow-400 rounded-full animate-orbit-1 shadow-lg"></div>
+                    <div className="absolute top-8 -left-6 w-3 h-3 bg-green-400 rounded-full animate-orbit-2 shadow-lg"></div>
+                    <div className="absolute -bottom-2 left-8 w-5 h-5 bg-purple-400 rounded-full animate-orbit-3 shadow-lg"></div>
+                    <div className="absolute bottom-12 -right-8 w-3 h-3 bg-red-400 rounded-full animate-orbit-4 shadow-lg"></div>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-4">Global Impact</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Building data science solutions with worldwide reach, connecting insights across continents to drive innovation and positive change.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

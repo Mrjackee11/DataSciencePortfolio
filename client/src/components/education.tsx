@@ -18,10 +18,10 @@ export function Education() {
           {education.map((edu, index) => (
             <div 
               key={index} 
-              className="group bg-gradient-to-r from-gray-50 via-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 transform hover:-translate-y-2 animate-fade-in-up"
+              className="group bg-gradient-to-r from-gray-50 via-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 transform hover:-translate-y-2 animate-fade-in-up animate-float-education"
               style={{
                 animationDelay: `${index * 0.3}s`,
-                animation: `slideInFromLeft 0.8s ease-out ${index * 0.3}s both`
+                animation: `slideInFromLeft 0.8s ease-out ${index * 0.3}s both, floatEducation ${4 + index}s ease-in-out infinite ${index * 0.5}s`
               }}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
