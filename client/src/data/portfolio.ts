@@ -66,13 +66,13 @@ export const skills: Skill[] = [
   { name: 'Scikit-learn', level: 86, category: 'data-science' },
   { name: 'Pandas/NumPy', level: 89, category: 'data-science' },
   { name: 'Computer Vision', level: 75, category: 'data-science' },
-  
+
   // Frontend
   { name: 'React', level: 85, category: 'frontend' },
   { name: 'JavaScript/TypeScript', level: 88, category: 'frontend' },
   { name: 'HTML/CSS', level: 90, category: 'frontend' },
   { name: 'Streamlit', level: 85, category: 'frontend' },
-  
+
   // Backend & Infrastructure
   { name: 'FastAPI/Flask', level: 88, category: 'backend' },
   { name: 'Apache Spark', level: 80, category: 'backend' },
@@ -149,6 +149,6 @@ export const personalInfo = {
   interests: ['Machine Learning', 'Deep Learning', 'Data Visualization', 'Statistical Modeling', 'MLOps', 'Open Source'],
   languages: ['English (Fluent)', 'Tamil (Native)', 'Hindi (Conversational)'],
   description: 'Building intelligent solutions through data science and machine learning',
-  github: 'https://github.com/Mrjackee11',
-  linkedin: 'https://www.linkedin.com/in/mahesh-r-0902612a6'
+  github: 'github.com/Mrjackee11',
+  linkedin: 'linkedin.com/in/mahesh-r-0902612a6'
 };
