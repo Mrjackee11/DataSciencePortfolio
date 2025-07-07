@@ -1,23 +1,9 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Laptop } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -30,19 +16,15 @@ export function Navigation() {
     }
   };
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-blue-100 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-              Mahesh
-            </div>
+          <div className="font-bold text-2xl">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+              {personalInfo.name}
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -79,73 +61,48 @@ export function Navigation() {
             </button>
           </div>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-                  <span className="sr-only">Toggle theme</span>
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                  <Sun className="mr-2 h-4 w-4" />
-                  <span>Light</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                  <Moon className="mr-2 h-4 w-4" />
-                  <span>Dark</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                  <Laptop className="mr-2 h-4 w-4" />
-                  <span>System</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black border-t border-gray-800">
-            <div className="px-4 py-4 space-y-3">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-blue-100">
               <button
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left text-gray-400 hover:text-white py-2"
+                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection('education')}
-                className="block w-full text-left text-gray-400 hover:text-white py-2"
+                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Education
               </button>
               <button
                 onClick={() => scrollToSection('skills')}
-                className="block w-full text-left text-gray-400 hover:text-white py-2"
+                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection('projects')}
-                className="block w-full text-left text-gray-400 hover:text-white py-2"
+                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left text-gray-400 hover:text-white py-2"
+                className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Contact
               </button>
