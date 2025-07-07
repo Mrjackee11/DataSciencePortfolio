@@ -43,10 +43,10 @@ export const projects: Project[] = [
     description: 'Dynamic business intelligence dashboard that visualizes sales performance, customer demographics, and revenue trends. Features real-time data updates and interactive filtering capabilities for comprehensive business insights.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&w=800&h=600&fit=crop',
     category: 'viz',
-    technologies: ['Python', 'Plotly', 'Dash', 'Pandas', 'SQL', 'PostgreSQL', 'CSS', 'JavaScript'],
-    githubUrl: 'https://github.com/maheshr/sales-dashboard',
+    technologies: ['Python', 'Plotly',  'Pandas', 'SQL',  'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/Mrjackee11',
     liveUrl: 'https://mahesh-sales-dashboard.herokuapp.com',
-    metrics: '15+ interactive charts, Real-time updates'
+    metrics: '7+ interactive charts, Real-time updates'
   }
 ];
 
@@ -58,13 +58,13 @@ export interface Skill {
 
 export const skills: Skill[] = [
   // Data Science & ML
-  { name: 'Python', level: 95, category: 'data-science' },
-  { name: 'Machine Learning', level: 90, category: 'data-science' },
-  { name: 'Statistical Analysis', level: 88, category: 'data-science' },
-  { name: 'Data Visualization', level: 92, category: 'data-science' },
+  { name: 'Python', level: 90, category: 'data-science' },
+  { name: 'Machine Learning', level: 95, category: 'data-science' },
+  { name: 'Statistical Analysis', level: 97, category: 'data-science' },
+  { name: 'Data Visualization', level: 95, category: 'data-science' },
   { name: 'SQL', level: 90, category: 'data-science' },
-  { name: 'Scikit-learn', level: 90, category: 'data-science' },
-  { name: 'Pandas/NumPy', level: 95, category: 'data-science' },
+  { name: 'Scikit-learn', level: 86, category: 'data-science' },
+  { name: 'Pandas/NumPy', level: 89, category: 'data-science' },
   { name: 'Computer Vision', level: 75, category: 'data-science' },
   
   // Frontend
@@ -94,9 +94,9 @@ export const education: Education[] = [
     degree: 'Higher Secondary Education (Science)',
     institution: 'Govt Boys High School',
     period: '2021 - 2023',
-    details: 'Concentrated on mathematics and computer science with honors in advanced statistics.',
+    details: 'Concentrated on mathematics , Physcis and Chemistry with Biology .',
     location: 'Alanganallur, Madurai',
-    subjects: ['Advanced Mathematics', 'Computer Science', 'Physics', 'Chemistry', 'Statistics']
+    subjects: ['Mathematics', 'Physics', 'Chemistry', 'Biology']
   }
 ];
 
@@ -149,6 +149,6 @@ export const personalInfo = {
   interests: ['Machine Learning', 'Deep Learning', 'Data Visualization', 'Statistical Modeling', 'MLOps', 'Open Source'],
   languages: ['English (Fluent)', 'Tamil (Native)', 'Hindi (Conversational)'],
   description: 'Building intelligent solutions through data science and machine learning',
-  github: 'https://github.com/mahesh',
-  linkedin: 'https://linkedin.com/in/mahesh'
+  github: 'https://github.com/Mrjackee11',
+  linkedin: 'https://www.linkedin.com/in/mahesh-r-0902612a6'
 };
