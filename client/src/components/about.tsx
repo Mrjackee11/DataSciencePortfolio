@@ -35,47 +35,68 @@ export function About() {
               </div>
               <div className="text-center">
                 <div className="relative perspective-1000">
-                  <div className="w-64 h-64 mx-auto relative animate-3d-globe">
-                    {/* Globe Container */}
-                    <div className="w-full h-full relative rounded-full bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 shadow-3d overflow-hidden">
-                      {/* Metal Skeleton Grid */}
-                      <div className="absolute inset-0 opacity-30">
-                        {/* Longitude lines */}
-                        <div className="absolute top-0 left-1/2 w-px h-full bg-gray-300 transform -translate-x-1/2 animate-skeleton-rotate"></div>
-                        <div className="absolute top-0 left-1/4 w-px h-full bg-gray-300 transform animate-skeleton-rotate"></div>
-                        <div className="absolute top-0 right-1/4 w-px h-full bg-gray-300 transform animate-skeleton-rotate"></div>
+                  <div className="w-72 h-72 mx-auto relative">
+                    {/* Outer Ring - Slowest rotation */}
+                    <div className="absolute inset-0 rounded-full border-4 border-blue-300/30 animate-globe-outer-slow"></div>
+                    
+                    {/* Middle Ring - Medium rotation */}
+                    <div className="absolute inset-4 rounded-full border-2 border-blue-400/40 animate-globe-middle-medium"></div>
+                    
+                    {/* Core Globe - Slow rotation */}
+                    <div className="absolute inset-8 w-56 h-56 relative animate-globe-core-slow">
+                      {/* Main Globe Body */}
+                      <div className="w-full h-full relative rounded-full bg-gradient-to-br from-blue-400 via-blue-500 to-blue-700 shadow-3d overflow-hidden">
+                        {/* Metal Wireframe Grid */}
+                        <div className="absolute inset-0 opacity-40">
+                          {/* Longitude Lines */}
+                          <div className="absolute top-0 left-1/2 w-0.5 h-full bg-gray-200 transform -translate-x-1/2"></div>
+                          <div className="absolute top-0 left-1/4 w-0.5 h-full bg-gray-200 transform rotate-12"></div>
+                          <div className="absolute top-0 right-1/4 w-0.5 h-full bg-gray-200 transform -rotate-12"></div>
+                          <div className="absolute top-0 left-3/4 w-0.5 h-full bg-gray-200 transform rotate-6"></div>
+                          
+                          {/* Latitude Lines */}
+                          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 transform -translate-y-1/2"></div>
+                          <div className="absolute top-1/3 left-0 w-full h-0.5 bg-gray-200 rounded-full transform scale-x-75"></div>
+                          <div className="absolute bottom-1/3 left-0 w-full h-0.5 bg-gray-200 rounded-full transform scale-x-75"></div>
+                          <div className="absolute top-1/6 left-0 w-full h-0.5 bg-gray-200 rounded-full transform scale-x-50"></div>
+                          <div className="absolute bottom-1/6 left-0 w-full h-0.5 bg-gray-200 rounded-full transform scale-x-50"></div>
+                        </div>
                         
-                        {/* Latitude lines */}
-                        <div className="absolute top-1/2 left-0 w-full h-px bg-gray-300 transform -translate-y-1/2"></div>
-                        <div className="absolute top-1/4 left-0 w-full h-px bg-gray-300 transform animate-latitude-pulse"></div>
-                        <div className="absolute bottom-1/4 left-0 w-full h-px bg-gray-300 transform animate-latitude-pulse"></div>
+                        {/* Continent Shapes - Rotating independently */}
+                        <div className="absolute inset-0 animate-continents-rotate">
+                          {/* North America */}
+                          <div className="absolute top-8 left-12 w-10 h-8 bg-green-500/70 rounded-lg transform rotate-12 shadow-md"></div>
+                          {/* Europe */}
+                          <div className="absolute top-10 right-16 w-6 h-5 bg-yellow-500/70 rounded transform -rotate-6 shadow-md"></div>
+                          {/* Asia */}
+                          <div className="absolute top-14 right-8 w-14 h-10 bg-red-500/70 rounded-xl transform rotate-3 shadow-md"></div>
+                          {/* Africa */}
+                          <div className="absolute top-20 left-18 w-7 h-12 bg-orange-500/70 rounded-2xl transform -rotate-15 shadow-md"></div>
+                          {/* Australia */}
+                          <div className="absolute bottom-14 right-12 w-7 h-5 bg-purple-500/70 rounded-lg transform rotate-45 shadow-md"></div>
+                          {/* South America */}
+                          <div className="absolute bottom-8 left-14 w-6 h-10 bg-pink-500/70 rounded-xl transform -rotate-24 shadow-md"></div>
+                        </div>
+                        
+                        {/* Atmospheric Glow Layer */}
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/20 via-transparent to-blue-300/30 animate-atmosphere-glow"></div>
+                        
+                        {/* Surface Shine Effect */}
+                        <div className="absolute top-4 left-4 w-16 h-16 bg-white/30 rounded-full blur-md animate-surface-shine"></div>
                       </div>
-                      
-                      {/* Country Impressions */}
-                      <div className="absolute inset-0 animate-countries-rotate">
-                        {/* North America */}
-                        <div className="absolute top-6 left-8 w-8 h-6 bg-green-400/60 rounded-sm transform rotate-12 animate-pulse"></div>
-                        {/* Europe */}
-                        <div className="absolute top-8 right-12 w-6 h-4 bg-yellow-400/60 rounded-sm transform -rotate-6 animate-pulse"></div>
-                        {/* Asia */}
-                        <div className="absolute top-12 right-6 w-12 h-8 bg-red-400/60 rounded-sm transform rotate-3 animate-pulse"></div>
-                        {/* Africa */}
-                        <div className="absolute top-16 left-16 w-6 h-10 bg-orange-400/60 rounded-sm transform -rotate-12 animate-pulse"></div>
-                        {/* Australia */}
-                        <div className="absolute bottom-12 right-10 w-6 h-4 bg-purple-400/60 rounded-sm transform rotate-45 animate-pulse"></div>
-                        {/* South America */}
-                        <div className="absolute bottom-6 left-12 w-5 h-8 bg-pink-400/60 rounded-sm transform -rotate-24 animate-pulse"></div>
-                      </div>
-                      
-                      {/* Atmosphere Glow */}
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-atmosphere"></div>
                     </div>
                     
-                    {/* Floating Data Points */}
-                    <div className="absolute -top-4 -right-4 w-4 h-4 bg-yellow-400 rounded-full animate-orbit-1 shadow-lg"></div>
-                    <div className="absolute top-8 -left-6 w-3 h-3 bg-green-400 rounded-full animate-orbit-2 shadow-lg"></div>
-                    <div className="absolute -bottom-2 left-8 w-5 h-5 bg-purple-400 rounded-full animate-orbit-3 shadow-lg"></div>
-                    <div className="absolute bottom-12 -right-8 w-3 h-3 bg-red-400 rounded-full animate-orbit-4 shadow-lg"></div>
+                    {/* Orbiting Data Points */}
+                    <div className="absolute inset-0">
+                      <div className="absolute top-0 left-1/2 w-3 h-3 bg-yellow-400 rounded-full animate-data-orbit-1 shadow-lg"></div>
+                      <div className="absolute top-1/2 left-0 w-4 h-4 bg-green-400 rounded-full animate-data-orbit-2 shadow-lg"></div>
+                      <div className="absolute bottom-0 left-1/2 w-3 h-3 bg-purple-400 rounded-full animate-data-orbit-3 shadow-lg"></div>
+                      <div className="absolute top-1/2 right-0 w-4 h-4 bg-red-400 rounded-full animate-data-orbit-4 shadow-lg"></div>
+                    </div>
+                    
+                    {/* Energy Rings */}
+                    <div className="absolute inset-2 rounded-full border border-blue-400/20 animate-energy-ring-1"></div>
+                    <div className="absolute inset-6 rounded-full border border-blue-500/30 animate-energy-ring-2"></div>
                   </div>
                   
                   <div className="mt-8">

@@ -272,52 +272,68 @@
     animation: floatGentle 4s ease-in-out infinite;
   }
 
-  /* 3D Globe Animations */
-  @keyframes rotate3d {
+  /* Enhanced 3D Globe Animations */
+  @keyframes globeOuterSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  @keyframes globeMiddleMedium {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+
+  @keyframes globeCoreSlow {
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(360deg); }
   }
 
-  @keyframes skeletonRotate {
-    0% { opacity: 0.3; }
-    50% { opacity: 0.7; }
-    100% { opacity: 0.3; }
-  }
-
-  @keyframes latitudePulse {
-    0%, 100% { opacity: 0.3; transform: scaleX(1); }
-    50% { opacity: 0.6; transform: scaleX(1.1); }
-  }
-
-  @keyframes countriesRotate {
+  @keyframes continentsRotate {
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(360deg); }
   }
 
-  @keyframes atmosphere {
-    0% { transform: rotateZ(0deg); opacity: 0.1; }
-    50% { opacity: 0.3; }
-    100% { transform: rotateZ(360deg); opacity: 0.1; }
+  @keyframes atmosphereGlow {
+    0%, 100% { opacity: 0.2; transform: rotate(0deg); }
+    50% { opacity: 0.4; transform: rotate(180deg); }
   }
 
-  @keyframes orbit1 {
-    0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
-    100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+  @keyframes surfaceShine {
+    0% { transform: translate(-20px, -20px) scale(0.8); opacity: 0.3; }
+    50% { transform: translate(20px, 20px) scale(1.2); opacity: 0.6; }
+    100% { transform: translate(-20px, -20px) scale(0.8); opacity: 0.3; }
   }
 
-  @keyframes orbit2 {
-    0% { transform: rotate(90deg) translateX(50px) rotate(-90deg); }
-    100% { transform: rotate(450deg) translateX(50px) rotate(-450deg); }
+  @keyframes dataOrbit1 {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
   }
 
-  @keyframes orbit3 {
-    0% { transform: rotate(180deg) translateX(45px) rotate(-180deg); }
-    100% { transform: rotate(540deg) translateX(45px) rotate(-540deg); }
+  @keyframes dataOrbit2 {
+    0% { transform: rotate(90deg) translateX(160px) rotate(-90deg); }
+    100% { transform: rotate(450deg) translateX(160px) rotate(-450deg); }
   }
 
-  @keyframes orbit4 {
-    0% { transform: rotate(270deg) translateX(55px) rotate(-270deg); }
-    100% { transform: rotate(630deg) translateX(55px) rotate(-630deg); }
+  @keyframes dataOrbit3 {
+    0% { transform: rotate(180deg) translateX(155px) rotate(-180deg); }
+    100% { transform: rotate(540deg) translateX(155px) rotate(-540deg); }
+  }
+
+  @keyframes dataOrbit4 {
+    0% { transform: rotate(270deg) translateX(165px) rotate(-270deg); }
+    100% { transform: rotate(630deg) translateX(165px) rotate(-630deg); }
+  }
+
+  @keyframes energyRing1 {
+    0% { transform: scale(1) rotate(0deg); opacity: 0.3; }
+    50% { transform: scale(1.05) rotate(180deg); opacity: 0.6; }
+    100% { transform: scale(1) rotate(360deg); opacity: 0.3; }
+  }
+
+  @keyframes energyRing2 {
+    0% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+    50% { transform: scale(1.08) rotate(-180deg); opacity: 0.7; }
+    100% { transform: scale(1) rotate(-360deg); opacity: 0.4; }
   }
 
   @keyframes floatEducation {
@@ -326,40 +342,52 @@
     66% { transform: translateY(-4px) rotate(-0.5deg); }
   }
 
-  .animate-3d-globe {
-    animation: rotate3d 20s linear infinite;
+  .animate-globe-outer-slow {
+    animation: globeOuterSlow 40s linear infinite;
   }
 
-  .animate-skeleton-rotate {
-    animation: skeletonRotate 3s ease-in-out infinite;
+  .animate-globe-middle-medium {
+    animation: globeMiddleMedium 25s linear infinite;
   }
 
-  .animate-latitude-pulse {
-    animation: latitudePulse 2s ease-in-out infinite;
+  .animate-globe-core-slow {
+    animation: globeCoreSlow 30s linear infinite;
   }
 
-  .animate-countries-rotate {
-    animation: countriesRotate 30s linear infinite;
+  .animate-continents-rotate {
+    animation: continentsRotate 35s linear infinite;
   }
 
-  .animate-atmosphere {
-    animation: atmosphere 15s linear infinite;
+  .animate-atmosphere-glow {
+    animation: atmosphereGlow 20s ease-in-out infinite;
   }
 
-  .animate-orbit-1 {
-    animation: orbit1 8s linear infinite;
+  .animate-surface-shine {
+    animation: surfaceShine 8s ease-in-out infinite;
   }
 
-  .animate-orbit-2 {
-    animation: orbit2 10s linear infinite;
+  .animate-data-orbit-1 {
+    animation: dataOrbit1 12s linear infinite;
   }
 
-  .animate-orbit-3 {
-    animation: orbit3 12s linear infinite;
+  .animate-data-orbit-2 {
+    animation: dataOrbit2 15s linear infinite;
   }
 
-  .animate-orbit-4 {
-    animation: orbit4 7s linear infinite;
+  .animate-data-orbit-3 {
+    animation: dataOrbit3 18s linear infinite;
+  }
+
+  .animate-data-orbit-4 {
+    animation: dataOrbit4 10s linear infinite;
+  }
+
+  .animate-energy-ring-1 {
+    animation: energyRing1 8s ease-in-out infinite;
+  }
+
+  .animate-energy-ring-2 {
+    animation: energyRing2 12s ease-in-out infinite;
   }
 
   .animate-float-education {
