@@ -44,20 +44,71 @@ export function Skills() {
                 <h4 className="text-lg font-bold text-gray-900 mb-3">{skill.name}</h4>
                 <div className="relative w-full bg-blue-100 rounded-full h-3 mb-3">
                   <div 
-                    className="absolute top-0 left-0 h-3 bg-gradient-to-r from-pink-500 to-pink-700 rounded-full animate-pulse-slow"
+                    className="absolute top-0 left-0 h-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full animate-pulse-slow"
                     style={{ 
                       width: `${skill.level}%`,
                       animationDelay: `${index * 0.1}s`
                     }}
                   />
                 </div>
-                <span className="text-pink-600 font-bold text-lg">{skill.level}%</span>
+                <span className="text-blue-600 font-bold text-lg">{skill.level}%</span>
               </div>
             ))}
           </div>
         </div>
 
+        {/* Other Skills */}
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8">
+            <div className="flex items-center mb-6">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-green-500 to-teal-600 text-white mr-4">
+                <Code size={24} />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Frontend Development</h3>
+            </div>
+            <div className="space-y-4">
+              {skills.filter(s => s.category === 'frontend').map((skill, index) => (
+                <div key={skill.name}>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm font-medium text-gray-700">{skill.name}</span>
+                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div 
+                      className="h-2 bg-gradient-to-r from-green-500 to-teal-600 rounded-full transition-all duration-1000"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
+          <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8">
+            <div className="flex items-center mb-6">
+              <div className="p-3 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-white mr-4">
+                <Database size={24} />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Backend & Infrastructure</h3>
+            </div>
+            <div className="space-y-4">
+              {skills.filter(s => s.category === 'backend').map((skill, index) => (
+                <div key={skill.name}>
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-sm font-medium text-gray-700">{skill.name}</span>
+                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div 
+                      className="h-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-full transition-all duration-1000"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
