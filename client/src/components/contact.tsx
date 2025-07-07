@@ -120,9 +120,9 @@ export function Contact() {
             <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-6">
-                <div className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mr-4">
-                    <Mail className="w-6 h-6 text-white" />
+                <div className="flex items-center p-4 bg-blue-50/30 rounded-lg hover:bg-blue-50/50 transition-all duration-300" style={{boxShadow: '0 1px 3px rgba(0,0,0,0.01)'}}>
+                  <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center mr-4 backdrop-blur-sm border border-blue-200/30">
+                    <Mail className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
@@ -130,23 +130,23 @@ export function Contact() {
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mr-4">
-                    <Phone className="w-6 h-6 text-white" />
+                <div className="flex items-center p-4 bg-blue-50/20 rounded-lg hover:bg-blue-50/40 transition-all duration-300" style={{boxShadow: '0 1px 3px rgba(0,0,0,0.01)'}}>
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mr-4 backdrop-blur-sm border border-blue-200/30">
+                    <Phone className="w-6 h-6 text-blue-500" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-green-600 font-medium">{personalInfo.phone}</p>
+                    <p className="text-blue-500 font-medium">{personalInfo.phone}</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center mr-4">
-                    <MapPin className="w-6 h-6 text-white" />
+                <div className="flex items-center p-4 bg-blue-50/25 rounded-lg hover:bg-blue-50/45 transition-all duration-300" style={{boxShadow: '0 1px 3px rgba(0,0,0,0.01)'}}>
+                  <div className="w-12 h-12 bg-blue-700/20 rounded-full flex items-center justify-center mr-4 backdrop-blur-sm border border-blue-200/30">
+                    <MapPin className="w-6 h-6 text-blue-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Location</h4>
-                    <p className="text-purple-600 font-medium">{personalInfo.location}</p>
+                    <p className="text-blue-700 font-medium">{personalInfo.location}</p>
                   </div>
                 </div>
               </div>
