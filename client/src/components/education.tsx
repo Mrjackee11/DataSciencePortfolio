@@ -30,9 +30,10 @@ export function Education() {
                     <div className="flex items-center mb-3">
                       <h3 className="text-2xl font-bold text-gray-900 mr-3">{edu.degree}</h3>
                       {edu.degree.includes('BSc') && (
-                        <div className="relative">
-                          <div className="w-4 h-4 bg-green-500 rounded-full animate-ping"></div>
-                          <div className="absolute top-0 left-0 w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                        <div className="relative flex items-center">
+                          <div className="w-5 h-5 bg-green-500 rounded-full animate-ping"></div>
+                          <div className="absolute top-0 left-0 w-5 h-5 bg-green-400 rounded-full animate-pulse"></div>
+                          <div className="ml-2 text-green-600 font-medium text-sm animate-bounce">Currently Studying</div>
                         </div>
                       )}
                     </div>

@@ -86,15 +86,7 @@ export function Hero() {
       </div>
 
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollToSection('about')}
-          className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-lg border border-blue-100 text-blue-600 hover:bg-blue-50 transition-colors"
-        >
-          <ChevronDown size={24} />
-        </button>
-      </div>
+
     </section>
   );
 }

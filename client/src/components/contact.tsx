@@ -117,23 +117,36 @@ export function Contact() {
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-6">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-900 font-medium">{personalInfo.email}</span>
+            <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-center p-4 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mr-4">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <div className="flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-900 font-medium">{personalInfo.phone}</span>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Email</h4>
+                    <p className="text-blue-600 font-medium">{personalInfo.email}</p>
                   </div>
-                  
-                  <div className="flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-blue-600 mr-3" />
-                    <span className="text-gray-900 font-medium">{personalInfo.location}</span>
+                </div>
+                
+                <div className="flex items-center p-4 bg-green-50 rounded-lg hover:bg-green-100 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mr-4">
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Phone</h4>
+                    <p className="text-green-600 font-medium">{personalInfo.phone}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center p-4 bg-purple-50 rounded-lg hover:bg-purple-100 transition-colors">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center mr-4">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Location</h4>
+                    <p className="text-purple-600 font-medium">{personalInfo.location}</p>
                   </div>
                 </div>
               </div>
