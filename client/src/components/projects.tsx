@@ -34,13 +34,13 @@ export function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 animate-slide-up">
+    <section id="projects" className="py-20 bg-white animate-slide-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100">
-            Featured Projects
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+            Featured <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-blue-600 max-w-2xl mx-auto text-lg font-medium">
             A showcase of my data science projects demonstrating various skills and techniques
           </p>
         </div>
@@ -50,21 +50,21 @@ export function Projects() {
           <Button
             onClick={() => setActiveFilter('all')}
             variant={activeFilter === 'all' ? 'default' : 'outline'}
-            className={activeFilter === 'all' ? 'bg-blue-600 text-white' : ''}
+            className={activeFilter === 'all' ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg' : 'border-blue-300 text-blue-600 hover:bg-blue-50'}
           >
             All
           </Button>
           <Button
             onClick={() => setActiveFilter('ml')}
             variant={activeFilter === 'ml' ? 'default' : 'outline'}
-            className={activeFilter === 'ml' ? 'bg-blue-600 text-white' : ''}
+            className={activeFilter === 'ml' ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg' : 'border-blue-300 text-blue-600 hover:bg-blue-50'}
           >
             Machine Learning
           </Button>
           <Button
             onClick={() => setActiveFilter('viz')}
             variant={activeFilter === 'viz' ? 'default' : 'outline'}
-            className={activeFilter === 'viz' ? 'bg-blue-600 text-white' : ''}
+            className={activeFilter === 'viz' ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg' : 'border-blue-300 text-blue-600 hover:bg-blue-50'}
           >
             Data Viz
           </Button>

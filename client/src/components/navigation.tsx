@@ -35,12 +35,12 @@ export function Navigation() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-gray-800">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-blue-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
               Mahesh
             </div>
           </div>
@@ -49,31 +49,31 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('education')}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               Education
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-600 hover:text-blue-600 transition-colors font-medium"
             >
               Contact
             </button>
