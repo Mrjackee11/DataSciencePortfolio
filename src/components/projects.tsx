@@ -2,14 +2,8 @@ import { useState } from 'react';
 import { Github, ExternalLink, TrendingUp, Users, Clock, Eye, Globe, Heart } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { projects, type Project } from '../data/portfolio';
-
-const categoryIcons = {
-  ml: TrendingUp,
-  viz: Globe,
-  nlp: Heart,
-  all: Users
-};
+import { projects } from '../data/portfolio';
+import Image from 'next/image';
 
 const metricIcons = {
   'Accuracy': TrendingUp,
@@ -75,9 +69,11 @@ export function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Card key={project.id} className="portfolio-card overflow-hidden">
-              <img
+              <Image
                 src={project.image}
                 alt={project.title}
+                width={48}
+                height={48}
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
@@ -116,10 +112,10 @@ export function Projects() {
                     <span
                       key={index}
                       className={`px-2 py-1 rounded text-xs ${index % 3 === 0
-                          ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300'
-                          : index % 3 === 1
-                            ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
-                            : 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300'
+                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300'
+                        : index % 3 === 1
+                          ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300'
+                          : 'bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300'
                         }`}
                     >
                       {tech}

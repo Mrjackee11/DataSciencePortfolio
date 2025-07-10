@@ -1,14 +1,8 @@
 import { Button } from '../components/ui/button';
-import { Github, Linkedin, Mail, Download, ChevronDown, Star, Award, Trophy } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, Star } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 export function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-white relative overflow-hidden">
@@ -29,7 +23,7 @@ export function Hero() {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-gray-900">
-              Hello, I'm <br />
+              Hello, I&apos;m <br />
               <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent animate-pulse">
                 {personalInfo.name}
               </span>

@@ -43,7 +43,7 @@ export function Contact() {
             Get In <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-blue-600 max-w-2xl mx-auto text-lg font-medium">
-            Let's discuss opportunities and collaborations
+            Let&apos;s discuss opportunities and collaborations
           </p>
         </div>
 

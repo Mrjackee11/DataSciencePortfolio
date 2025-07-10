@@ -1,4 +1,3 @@
-import { Code2, Target, Zap, Brain, Database, TrendingUp, Code } from 'lucide-react';
 
 export function About() {
   return (
@@ -13,18 +12,16 @@ export function About() {
           </p>
         </div>
 
-
-
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  I'm a passionate data science student with expertise in machine learning and statistical analysis. My journey began with curiosity about patterns in data and has evolved into building intelligent systems that solve real-world problems.
+                  I&apos;m a passionate data science student with expertise in machine learning and statistical analysis. My journey began with curiosity about patterns in data and has evolved into building intelligent systems that solve real-world problems.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
-                  Currently pursuing my Bachelor's in Data Science at DG Vaishnav College, I've gained hands-on experience through internships and personal projects, focusing on predictive modeling, data visualization, and machine learning applications.
+                  Currently pursuing my Bachelor&apos;s in Data Science at DG Vaishnav College, I&apos;ve gained hands-on experience through internships and personal projects, focusing on predictive modeling, data visualization, and machine learning applications.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Machine Learning</span>

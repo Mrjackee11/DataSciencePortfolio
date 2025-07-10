@@ -1,20 +1,7 @@
-import { Brain, Database, Code, TrendingUp, BarChart3, Cpu, Zap } from 'lucide-react';
 import { skills } from '../data/portfolio';
-
-const skillIcons = {
-  'Python': <div className="text-2xl">🐍</div>,
-  'Machine Learning': <Brain className="w-6 h-6" />,
-  'Statistical Analysis': <BarChart3 className="w-6 h-6" />,
-  'Data Visualization': <TrendingUp className="w-6 h-6" />,
-  'SQL': <Database className="w-6 h-6" />,
-  'Scikit-learn': <Cpu className="w-6 h-6" />,
-  'Pandas/NumPy': <div className="text-2xl">🐼</div>,
-  'Computer Vision': <div className="text-2xl">👁️</div>
-};
 
 export function Skills() {
   const dataScientSkills = skills.filter(skill => skill.category === 'data-science');
-  const otherSkills = skills.filter(skill => skill.category !== 'data-science');
 
   return (
     <section id="skills" className="py-20 bg-gradient-to-br from-blue-50 to-white animate-slide-up">
