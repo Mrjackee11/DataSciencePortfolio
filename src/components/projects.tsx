@@ -72,8 +72,8 @@ export function Projects() {
               <Image
                 src={project.image}
                 alt={project.title}
-                width={48}
-                height={48}
+                width={600}
+                height={400}
                 className="w-full h-48 object-cover"
               />
               <CardContent className="p-6">
