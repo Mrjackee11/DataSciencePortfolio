@@ -46,10 +46,8 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
-              href="/Mahesh_R_Resume.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Mahesh_R_Resume.html"
+              href="/Mahesh_R_Resume.pdf"
+              download="Mahesh_R_Resume.pdf"
             >
               <Button
                 variant="outline"
