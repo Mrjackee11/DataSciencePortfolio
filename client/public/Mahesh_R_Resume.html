@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh R - Resume</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; background: #fff; font-size: 13px; line-height: 1.5; }
+    .page { max-width: 800px; margin: 0 auto; padding: 32px 40px; }
+    .header { text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 18px; margin-bottom: 20px; }
+    .header h1 { font-size: 30px; font-weight: 700; color: #1e3a8a; letter-spacing: 1px; }
+    .header .title { font-size: 14px; color: #2563eb; font-weight: 600; margin: 4px 0 10px; }
+    .contact-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #374151; }
+    .contact-row span { display: flex; align-items: center; gap: 4px; }
+    .section { margin-bottom: 18px; }
+    .section-title { font-size: 13px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1.5px solid #bfdbfe; padding-bottom: 4px; margin-bottom: 10px; }
+    .entry { margin-bottom: 12px; }
+    .entry-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+    .entry-title { font-weight: 700; color: #1e3a8a; font-size: 13.5px; }
+    .entry-sub { color: #2563eb; font-weight: 600; }
+    .entry-date { color: #6b7280; font-size: 11.5px; white-space: nowrap; }
+    .entry-location { color: #9ca3af; font-size: 11px; }
+    .entry-desc { color: #374151; margin-top: 4px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 5px; }
+    .tag { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; border-radius: 12px; padding: 2px 9px; font-size: 11px; font-weight: 500; }
+    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .skill-item { background: #f8faff; border: 1px solid #dbeafe; border-radius: 6px; padding: 5px 10px; }
+    .skill-name { font-weight: 600; color: #1e3a8a; font-size: 12px; }
+    .skill-bar { height: 4px; background: #e0e7ff; border-radius: 2px; margin-top: 3px; }
+    .skill-fill { height: 4px; background: linear-gradient(90deg, #2563eb, #3b82f6); border-radius: 2px; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    ul { padding-left: 16px; }
+    ul li { color: #374151; margin-bottom: 2px; }
+    .print-btn { position: fixed; top: 16px; right: 16px; background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; box-shadow: 0 2px 8px rgba(37,99,235,0.4); z-index: 100; }
+    .print-btn:hover { background: #1d4ed8; }
+    @media print { .print-btn { display: none; } body { font-size: 12px; } .page { padding: 20px 28px; } }
+  </style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">⬇ Save as PDF</button>
+<div class="page">
+
+  <div class="header">
+    <h1>MAHESH R</h1>
+    <div class="title">Data Science Student &amp; AI Enthusiast</div>
+    <div class="contact-row">
+      <span>📧 maheshr12117@gmail.com</span>
+      <span>📱 +91 9677870887</span>
+      <span>📍 Chennai, India</span>
+      <span>🔗 github.com/Mrjackee11</span>
+      <span>💼 linkedin.com/in/mahesh-r-0902612a6</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="entry-desc">
+      Passionate Data Science student with hands-on experience in machine learning, statistical analysis, and data visualization. Dedicated to leveraging data-driven insights to solve real-world problems and drive business value. Experienced in Python, scikit-learn, and modern ML frameworks with a strong foundation in statistical modeling and big data analytics.
+    </p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Bachelor of Science in Data Science</div>
+          <div class="entry-sub">DG Vaishnav College</div>
+          <div class="entry-location">Chennai, India</div>
+        </div>
+        <div class="entry-date">2023 – Present</div>
+      </div>
+      <div class="entry-desc">Specialized in machine learning, statistical modeling, and big data analytics. Focus on practical applications of AI in business contexts.</div>
+      <div class="tags">
+        <span class="tag">Machine Learning</span><span class="tag">Statistical Methods</span><span class="tag">Data Mining</span>
+        <span class="tag">Deep Learning</span><span class="tag">Business Analytics</span><span class="tag">Database Systems</span>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Higher Secondary Education (Science)</div>
+          <div class="entry-sub">Govt Boys High School</div>
+          <div class="entry-location">Alanganallur, Madurai</div>
+        </div>
+        <div class="entry-date">2021 – 2023</div>
+      </div>
+      <div class="tags">
+        <span class="tag">Mathematics</span><span class="tag">Physics</span><span class="tag">Chemistry</span><span class="tag">Biology</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experience</div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Data Science Intern</div>
+          <div class="entry-sub">Shamgar Software Solutions</div>
+        </div>
+        <div class="entry-date">Jun 2024 – Aug 2024</div>
+      </div>
+      <div class="entry-desc">Developed predictive models for customer behavior analysis and created automated reporting dashboards. Worked with cross-functional teams to implement ML solutions in production.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Machine Learning Trainee</div>
+          <div class="entry-sub">TechVision Analytics</div>
+        </div>
+        <div class="entry-date">Oct 2024 – Dec 2024</div>
+      </div>
+      <div class="entry-desc">Participated in intensive ML training program focusing on deep learning and computer vision. Built image classification models for retail analytics.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Research Assistant</div>
+          <div class="entry-sub">DG Vaishnav College</div>
+        </div>
+        <div class="entry-date">Jan 2024 – Present</div>
+      </div>
+      <div class="entry-desc">Assisting in research projects focused on machine learning applications in healthcare. Published findings in college journal.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Freelance Data Analyst</div>
+          <div class="entry-sub">Self-Employed</div>
+        </div>
+        <div class="entry-date">Sep 2023 – Present</div>
+      </div>
+      <div class="entry-desc">Providing data analysis and visualization services to small businesses. Created custom dashboards and performed statistical analysis for decision-making support.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projects</div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Credit Card Risk Analysis</div>
+          <div class="entry-sub">Machine Learning | 87% accuracy, 0.82 AUC score</div>
+        </div>
+        <a href="https://github.com/maheshr/credit-card-risk-analysis" style="color:#2563eb;font-size:11px;">GitHub ↗</a>
+      </div>
+      <div class="entry-desc">Comprehensive ML model for assessing credit card default risk. Analyzed payment histories, credit utilization patterns, and demographic factors to predict default probability.</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">Random Forest</span><span class="tag">SMOTE</span><span class="tag">Seaborn</span>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-header">
+        <div>
+          <div class="entry-title">Interactive Sales Dashboard</div>
+          <div class="entry-sub">Data Visualization | 7+ interactive charts</div>
+        </div>
+        <a href="https://github.com/Mrjackee11" style="color:#2563eb;font-size:11px;">GitHub ↗</a>
+      </div>
+      <div class="entry-desc">Dynamic BI dashboard visualizing sales performance, customer demographics, and revenue trends with real-time data updates and interactive filtering.</div>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">JavaScript</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="two-col">
+    <div class="section">
+      <div class="section-title">Technical Skills</div>
+      <div class="skills-grid">
+        <div class="skill-item"><div class="skill-name">Python</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Machine Learning</div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Statistics</div><div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">SQL</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Pandas/NumPy</div><div class="skill-bar"><div class="skill-fill" style="width:89%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Scikit-learn</div><div class="skill-bar"><div class="skill-fill" style="width:86%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Data Viz</div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">FastAPI/Flask</div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+        <div class="skill-item"><div class="skill-name">AWS/Azure</div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div></div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section">
+        <div class="section-title">Languages</div>
+        <ul>
+          <li>English (Fluent)</li>
+          <li>Tamil (Native)</li>
+          <li>Hindi (Conversational)</li>
+        </ul>
+      </div>
+      <div class="section" style="margin-top:14px">
+        <div class="section-title">Tools &amp; Platforms</div>
+        <div class="tags">
+          <span class="tag">Jupyter</span><span class="tag">Google Colab</span><span class="tag">Tableau</span>
+          <span class="tag">Power BI</span><span class="tag">MLflow</span><span class="tag">Git/CI/CD</span>
+          <span class="tag">Apache Spark</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="section" style="margin-top:14px">
+        <div class="section-title">Interests</div>
+        <div class="tags">
+          <span class="tag">Deep Learning</span><span class="tag">MLOps</span><span class="tag">Open Source</span><span class="tag">AI Research</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
