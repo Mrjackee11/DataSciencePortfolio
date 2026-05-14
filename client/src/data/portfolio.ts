@@ -63,7 +63,7 @@ export const skills: Skill[] = [
   { name: 'Statistical Analysis', level: 97, category: 'data-science' },
   { name: 'Data Visualization', level: 95, category: 'data-science' },
   { name: 'SQL', level: 90, category: 'data-science' },
-  { name: 'Scikit-learn', level: 86, category: 'data-science' },
+  { name: 'Scikit-learn', level: 90, category: 'data-science' },
   { name: 'Pandas/NumPy', level: 89, category: 'data-science' },
   { name: 'Computer Vision', level: 75, category: 'data-science' },
 
