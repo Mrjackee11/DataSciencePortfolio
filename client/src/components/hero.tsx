@@ -22,7 +22,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
           <div className="mb-6">
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center mb-8">
               <div className="flex items-center space-x-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/50 rounded-full">
                 <Star className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 <span className="text-sm font-medium text-blue-800 dark:text-blue-300">Data Science Student</span>

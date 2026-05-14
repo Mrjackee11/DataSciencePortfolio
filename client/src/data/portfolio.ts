@@ -45,7 +45,6 @@ export const projects: Project[] = [
     category: 'viz',
     technologies: ['Python', 'Plotly',  'Pandas', 'SQL',  'CSS', 'JavaScript'],
     githubUrl: 'https://github.com/Mrjackee11',
-    liveUrl: 'https://mahesh-sales-dashboard.herokuapp.com',
     metrics: '7+ interactive charts, Real-time updates'
   }
 ];

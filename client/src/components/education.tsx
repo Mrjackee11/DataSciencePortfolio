@@ -1,4 +1,5 @@
 import { GraduationCap, Calendar, MapPin, BookOpen } from 'lucide-react';
+import collegeLogo from '/college-logo.png';
 import { education } from '@/data/portfolio';
 
 export function Education() {
@@ -20,8 +21,14 @@ export function Education() {
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div className="flex items-start">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center mr-6 mt-1 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg flex-shrink-0">
-                    <GraduationCap className="text-white" size={28} />
+                  <div className="w-16 h-16 rounded-xl flex items-center justify-center mr-6 mt-1 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg flex-shrink-0 overflow-hidden bg-white">
+                    {edu.institution === 'DG Vaishnav College' ? (
+                      <img src={collegeLogo} alt="DG Vaishnav College" className="w-full h-full object-cover" />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 flex items-center justify-center">
+                        <GraduationCap className="text-white" size={28} />
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center flex-wrap gap-3 mb-3">
