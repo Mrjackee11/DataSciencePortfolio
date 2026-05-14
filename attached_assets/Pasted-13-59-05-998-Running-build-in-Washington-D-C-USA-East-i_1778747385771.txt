@@ -1,0 +1,46 @@
+13:59:05.998 Running build in Washington, D.C., USA (East) – iad1
+13:59:05.998 Build machine configuration: 2 cores, 8 GB
+13:59:06.007 Cloning github.com/Mrjackee11/DataSciencePortfolio (Branch: main, Commit: cc16df5)
+13:59:06.008 Skipping build cache, deployment was triggered without cache.
+13:59:06.741 Cloning completed: 733.000ms
+13:59:07.043 Running "vercel build"
+13:59:07.057 (node:14) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+13:59:07.057 (Use `node --trace-deprecation ...` to show where the warning was created)
+13:59:07.094 Vercel CLI 53.3.2
+13:59:07.599 Installing dependencies...
+13:59:11.182 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+13:59:11.183 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+13:59:16.156 
+13:59:16.158 added 481 packages in 8s
+13:59:16.158 
+13:59:16.159 64 packages are looking for funding
+13:59:16.159   run `npm fund` for details
+13:59:19.026 
+13:59:19.027 up to date, audited 482 packages in 3s
+13:59:19.027 
+13:59:19.028 64 packages are looking for funding
+13:59:19.028   run `npm fund` for details
+13:59:19.080 
+13:59:19.081 22 vulnerabilities (3 low, 11 moderate, 8 high)
+13:59:19.081 
+13:59:19.082 To address issues that do not require attention, run:
+13:59:19.082   npm audit fix
+13:59:19.082 
+13:59:19.082 To address all issues (including breaking changes), run:
+13:59:19.083   npm audit fix --force
+13:59:19.083 
+13:59:19.083 Run `npm audit` for details.
+13:59:19.721 vite v5.4.14 building for production...
+13:59:19.768 transforming...
+13:59:19.999 Browserslist: browsers data (caniuse-lite) is 19 months old. Please run:
+13:59:19.999   npx update-browserslist-db@latest
+13:59:19.999   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+13:59:23.548 ✓ 1674 modules transformed.
+13:59:23.760 rendering chunks...
+13:59:23.769 computing gzip size...
+13:59:23.873 ../dist/public/index.html                   1.50 kB │ gzip:  0.74 kB
+13:59:23.873 ../dist/public/assets/index-Bkx4P1hF.css   85.83 kB │ gzip: 14.50 kB
+13:59:23.874 ../dist/public/assets/index-CUAr4XeG.js   309.87 kB │ gzip: 96.18 kB
+13:59:23.874 ✓ built in 4.13s
+13:59:23.988 Build Completed in /vercel/output [16s]
+13:59:24.025 Deploying outputs...
