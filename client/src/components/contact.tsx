@@ -1,68 +1,7 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 
-interface ContactForm {
-  name: string;
-  email: string;
-  message: string;
-}
-
 export function Contact() {
-  const [form, setForm] = useState<ContactForm>({ name: '', email: '', message: '' });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setForm(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast({ title: "Please fill all fields", description: "All fields are required.", variant: "destructive" });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    const subject = `Portfolio Contact from ${form.name.trim()}`;
-    const body = [
-      'Hi Mahesh,',
-      '',
-      'You have a new message from your portfolio website.',
-      '',
-      `From: ${form.name.trim()}`,
-      `Email: ${form.email.trim()}`,
-      '',
-      'Message:',
-      form.message.trim(),
-      '',
-      '---',
-      'Sent via Portfolio Contact Form',
-    ].join('\n');
-    const mailtoParams = new URLSearchParams({ subject, body });
-    const mailtoLink = `mailto:${personalInfo.email}?${mailtoParams.toString()}`;
-
-    // Keep the portfolio open and preserve the form if the browser cannot
-    // open a default email app or blocks the mailto link.
-    const emailAppWindow = window.open(mailtoLink, '_blank', 'noopener,noreferrer');
-
-    setIsSubmitting(false);
-    toast({
-      title: emailAppWindow ? "Email draft opened" : "Open your email app to send",
-      description: emailAppWindow
-        ? `Your message is addressed to ${personalInfo.email}. Review it and press Send.`
-        : `Your browser blocked the email app. Email ${personalInfo.email} directly, or allow pop-ups and try again.`,
-    });
-  };
-
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 animate-slide-up transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,77 +14,9 @@ export function Contact() {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-blue-100 dark:border-gray-700 p-8 transition-colors duration-300">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send a Message</h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Full Name
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Your full name"
-                    value={form.name}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full border-blue-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="your.email@example.com"
-                    value={form.email}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full border-blue-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    placeholder="Tell me about your project or idea..."
-                    value={form.message}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full border-blue-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg"
-                >
-                  <Send className="mr-2 h-4 w-4" />
-                  {isSubmitting ? 'Preparing email...' : 'Send Message'}
-                </Button>
-
-                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                  Your email app will open with this message addressed to {personalInfo.email}.
-                </p>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-blue-100 dark:border-gray-700 p-8 transition-colors duration-300">
+        <div className="max-w-2xl mx-auto">
+          {/* Contact Information */}
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-blue-100 dark:border-gray-700 p-8 transition-colors duration-300">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <a
@@ -184,7 +55,6 @@ export function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
