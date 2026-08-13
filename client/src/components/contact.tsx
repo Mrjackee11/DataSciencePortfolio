@@ -32,23 +32,35 @@ export function Contact() {
 
     setIsSubmitting(true);
 
-    const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
-    const body = encodeURIComponent(
-      `Hi Mahesh,\n\nYou have a new message from your portfolio website.\n\nFrom: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}\n\n---\nSent via Portfolio Contact Form`
-    );
-    const mailtoLink = `mailto:${personalInfo.email}?subject=${subject}&body=${body}`;
+    const subject = `Portfolio Contact from ${form.name.trim()}`;
+    const body = [
+      'Hi Mahesh,',
+      '',
+      'You have a new message from your portfolio website.',
+      '',
+      `From: ${form.name.trim()}`,
+      `Email: ${form.email.trim()}`,
+      '',
+      'Message:',
+      form.message.trim(),
+      '',
+      '---',
+      'Sent via Portfolio Contact Form',
+    ].join('\n');
+    const mailtoParams = new URLSearchParams({ subject, body });
+    const mailtoLink = `mailto:${personalInfo.email}?${mailtoParams.toString()}`;
 
-    window.location.href = mailtoLink;
+    // Keep the portfolio open and preserve the form if the browser cannot
+    // open a default email app or blocks the mailto link.
+    const emailAppWindow = window.open(mailtoLink, '_blank', 'noopener,noreferrer');
 
-    await new Promise(resolve => setTimeout(resolve, 800));
-
-    toast({
-      title: "Email client opened!",
-      description: "Your message has been prepared. Please send it from your email client.",
-    });
-
-    setForm({ name: '', email: '', message: '' });
     setIsSubmitting(false);
+    toast({
+      title: emailAppWindow ? "Email draft opened" : "Open your email app to send",
+      description: emailAppWindow
+        ? `Your message is addressed to ${personalInfo.email}. Review it and press Send.`
+        : `Your browser blocked the email app. Email ${personalInfo.email} directly, or allow pop-ups and try again.`,
+    });
   };
 
   return (
@@ -123,11 +135,11 @@ export function Contact() {
                   className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 shadow-lg"
                 >
                   <Send className="mr-2 h-4 w-4" />
-                  {isSubmitting ? 'Opening email...' : 'Send Message'}
+                  {isSubmitting ? 'Preparing email...' : 'Send Message'}
                 </Button>
 
                 <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-                  This will open your email client with the message pre-filled.
+                  Your email app will open with this message addressed to {personalInfo.email}.
                 </p>
               </form>
             </div>
